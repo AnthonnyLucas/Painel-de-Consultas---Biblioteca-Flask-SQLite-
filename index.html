@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin da Biblioteca</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-book-reader"></i>
+                <h2>Biblioteca Admin</h2>
+            </div>
+            <nav class="sidebar-nav" id="query-buttons">
+                <h3>Consultas Disponíveis</h3>
+                <button data-query="q1"><i class="fas fa-book"></i> Livros e Autores</button>
+                <button data-query="q2"><i class="fas fa-handshake"></i> Empréstimos e Usuários</button>
+                <button data-query="q3"><i class="fas fa-tags"></i> Livros e Categorias</button>
+                <button data-query="q4"><i class="fas fa-book-open"></i> Livros Emprestados</button>
+                <button data-query="q5"><i class="fas fa-user-edit"></i> Autores e seus Livros</button>
+                <div class="separator"></div>
+                <h4>Novas Consultas</h4>
+                <button data-query="q6"><i class="fas fa-calendar-alt"></i> Emprestados Atualmente</button>
+                <button data-query="q7"><i class="fas fa-chart-bar"></i> Contagem por Autor</button>
+                <button data-query="q8"><i class="fas fa-flask"></i> Livros de Ficção Científica</button>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="navbar">
+                <div class="header-title">
+                    <i class="fas fa-chart-line"></i>
+                    <h1 id="main-dashboard-title">Visão Geral do Banco de Dados</h1>
+                </div>
+            </header>
+
+            <section class="content-section">
+                <h2 id="result-title">Selecione uma Consulta</h2>
+                <div id="status-message" class="status-info">
+                    <p><i class="fas fa-info-circle"></i> Use o menu lateral para explorar os dados da biblioteca.</p>
+                </div>
+                
+                <div class="table-container">
+                    <table id="result-table">
+                        <thead id="result-head"></thead>
+                        <tbody id="result-body"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
