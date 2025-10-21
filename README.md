@@ -4,9 +4,8 @@ Este projeto é uma aplicação web completa que serve como uma interface gráfi
 
 Originalmente uma atividade acadêmica de análise e desempenho de SGBDs, o projeto evoluiu para uma aplicação interativa que permite ao usuário executar consultas SQL complexas com o clique de um botão e visualizar os resultados em tempo real.
 
-<div align="center">
-<img src="![Image](https://github.com/user-attachments/assets/9de6f3ed-070e-4760-a293-fb5e6d601eca)" width="700px" />
-</div>
+![Image](https://github.com/user-attachments/assets/9de6f3ed-070e-4760-a293-fb5e6d601eca)
+
 ## Funcionalidades Principais
 
 * **Backend com API:** Um servidor Flask que expõe uma API RESTful para executar consultas no banco de dados.
